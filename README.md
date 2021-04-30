@@ -2,7 +2,9 @@
 
 Zeyu Wang, Sherry Qiu, Nicole Feng, Holly Rushmeier, Leonard McMillan, Julie Dorsey
 
-Conditionally accepted to SIGGRAPH 2021
+SIGGRAPH 2021
+
+[[Paper]](https://graphics.cs.yale.edu/sites/default/files/tracing-vs-freehand.pdf)
 
 ![teaser](teaser.jpg)
 
