@@ -41,3 +41,28 @@ JSON data format:
   ...
 }
 ```
+
+## Citation
+
+The dataset and code are released for academic research use only under CC BY-NC-SA 4.0.
+
+If you use the dataset or code for your research, please cite this paper:
+```
+@article{Wang:2021:Tracing,
+  author = {Wang, Zeyu and Qiu, Sherry and Feng, Nicole and Rushmeier,  Holly and McMillan, Leonard and Dorsey, Julie},
+  title = {Tracing Versus Freehand for Evaluating Computer-Generated Drawings},
+  year = {2021},
+  issue_date = {August 2021},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {40},
+  number = {4},
+  issn = {0730-0301},
+  url = {https://doi.org/10.1145/3450626.3459819},
+  doi = {10.1145/3450626.3459819},
+  journal = {ACM Trans. Graph.},
+  month = aug,
+  numpages = {12},
+  keywords = {sketch dataset, drawing process, stroke analysis}
+}
+```
