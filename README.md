@@ -11,6 +11,8 @@ Zeyu Wang, Sherry Qiu, Nicole Feng, Holly Rushmeier, Leonard McMillan, Julie Dor
 
 The dataset consists of 1,498 tracings and freehand drawings by 110 participants for 100 image prompts. Our drawings are registered to the prompts and include vector-based timestamped strokes collected via stylus input.
 
+[Image prompts](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/images.zip).
+
 All rendered tracings and freehand drawings in [SVG](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/svg.zip) and [PNG](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/png.zip).
 
 Raw JSON data: [tracings](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/tracings.json), [freehand drawings](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/drawings.json), [registered freehand drawings](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/drawings_registered.json).
