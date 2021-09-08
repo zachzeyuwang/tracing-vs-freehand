@@ -44,7 +44,9 @@ JSON data format:
 
 ## Analysis Code
 
-More to come, stay tuned!
+`utils/render_png_from_json.py` renders the drawings in png format from the raw JSON data.
+
+More analysis code, including drawing registration, will be released once I finish tidying them up and writing documentation. If you need anything in particular, please feel free to reach out to me directly via email.
 
 ## Citation
 
