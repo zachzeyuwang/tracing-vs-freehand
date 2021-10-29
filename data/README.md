@@ -1,4 +1,4 @@
-# Prepare Dataset for Analysis
+# Data Preparation for Analysis
 
 Run the following commands in the terminal to prepare the dataset:
 
