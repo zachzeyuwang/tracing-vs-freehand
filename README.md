@@ -15,11 +15,11 @@ Instructions for data preparation can be found in the `data` folder. All code in
 
 *Please right click the links below and "Save link as..." if it doesn't download automatically.*
 
-[Image prompts](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/images.zip).
+[Image prompts](http://tracer.cs.yale.edu/tracing-vs-freehand/data/images.zip).
 
-All rendered tracings and freehand drawings in [SVG](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/svg.zip) and [PNG](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/png.zip).
+All rendered tracings and freehand drawings in [SVG](http://tracer.cs.yale.edu/tracing-vs-freehand/data/svg.zip) and [PNG](http://tracer.cs.yale.edu/tracing-vs-freehand/data/png.zip).
 
-Raw JSON data: [tracings](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/tracings.json), [freehand drawings](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/drawings.json), [registered freehand drawings](http://tracer.cs.yale.edu:8000/tracing-vs-freehand/data/drawings_registered.json).
+Raw JSON data: [tracings](http://tracer.cs.yale.edu/tracing-vs-freehand/data/tracings.json), [freehand drawings](http://tracer.cs.yale.edu/tracing-vs-freehand/data/drawings.json), [registered freehand drawings](http://tracer.cs.yale.edu/tracing-vs-freehand/data/drawings_registered.json).
 
 JSON data format:
 ```
