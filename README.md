@@ -44,11 +44,15 @@ JSON data format:
 }
 ```
 
-## Analysis Code
+## Code
+
+Before running any code, please run `conda env create -f environment.yml` and `conda activate tracer`.
 
 `utils/render_png_from_json.py` renders the drawings in png format from the raw JSON data.
 
-More analysis code, including drawing registration, will be released once I finish tidying them up and writing documentation. If you need anything in particular, please feel free to reach out to me directly via email.
+`registration/` stores the scripts used to register freehand drawings to the tracing density.
+
+If you need anything in particular, please feel free to reach out to me directly.
 
 ## Citation
 
