@@ -12,7 +12,7 @@ Zeyu Wang, Sherry Qiu, Nicole Feng, Holly Rushmeier, Leonard McMillan, Julie Dor
 
 The dataset consists of 1,498 tracings and freehand drawings by 110 participants for 100 image prompts. Our drawings are registered to the prompts and include vector-based timestamped strokes collected via stylus input.
 
-Please run `zsh prepare_data.sh` to download the dataset, which will be placed in the `data` folder (about 600MB after unzipping). All code in this repository takes input from the `data` folder.
+Please run `bash prepare_data.sh` to download the dataset, which will be placed in the `data` folder (about 600MB after unzipping). All code in this repository takes input from the `data` folder.
 
 `data/tracings.json`, `data/drawings.json`, and `data/drawings_registered.json` use the following format.
 ```
@@ -39,11 +39,10 @@ Please run `zsh prepare_data.sh` to download the dataset, which will be placed i
 
 ## Code
 
-Before running any code, please run `conda env create -f environment.yml` and `conda activate tracer`. All code has been tested on Ubuntu 20.04.
+Before running any code, please run `conda env create -f environment.yml`, `conda activate tracer`, and `sudo apt install librsvg2-bin`. All code has been tested on Ubuntu 20.04.
 
-`utils/render_png_from_json.py` renders the drawings in png format from the raw JSON data.
-
-`registration/` stores the scripts used to register freehand drawings to the tracing density.
+- `utils/` contains the code for rendering drawings and their composites from the raw JSON data.
+- `registration/` contains the code for registering freehand drawings to tracing density.
 
 If you need anything in particular, please feel free to reach out to me directly.
 

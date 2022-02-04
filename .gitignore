@@ -4,3 +4,8 @@ data/png/
 data/svg/
 data/*.json
 data/*.zip
+registration/__pycache__/
+registration/transform_labeled/
+registration/transform_unlabeled/
+registration/visual_labeled/
+registration/visual_unlabeled/

@@ -18,12 +18,14 @@ import SimpleITK as sitk
 #     print("\tStop Condition: {0}".format(method.GetOptimizerStopConditionDescription()))
 #     print("============= Resolution Change =============")
 
-if len ( sys.argv ) < 3:
-    print( "Usage: {0} <fixedImageFilter> <movingImageFile> <outputTransformFile>".format(sys.argv[0]))
+if len ( sys.argv ) != 3:
+    print( "Usage: {0} <IMAGE_FILENAME.png> <PARTICIPANT_ID>".format(sys.argv[0]))
     sys.exit ( 1 )
 
 image = sys.argv[1]
 uid = sys.argv[2]
+print("Registering without labeled fiducials: %s %s" % (image, uid))
+
 
 kernel = np.ones((3, 3), np.uint8)
 fixed_0_np = cv2.imread("../data/png/drawings/%s&%s.png" % (image[:-4], uid), cv2.IMREAD_GRAYSCALE)
@@ -99,8 +101,8 @@ R.SetShrinkFactorsPerLevel([4, 2, 1])
 R.SetSmoothingSigmasPerLevel([4, 2, 1])
 
 def command_multiresolution_iteration(method):
-    print("\tStop Condition: {0}".format(method.GetOptimizerStopConditionDescription()))
-    print("============= Resolution Change =============")
+    # print("\tStop Condition: {0}".format(method.GetOptimizerStopConditionDescription()))
+    # print("============= Resolution Change =============")
     global mulres
     mulres += 1
     

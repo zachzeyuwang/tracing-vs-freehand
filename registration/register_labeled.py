@@ -7,18 +7,20 @@ import SimpleITK as sitk
 from ThinPlateSplineShapeTransformer import ThinPlateSplineShapeTransformer
 
 def command_iteration(method) :
-    if (method.GetOptimizerIteration() == 0):
-        print("\tLevel: {0}".format(method.GetCurrentLevel()))
-        print("\tScales: {0}".format(method.GetOptimizerScales()))
-    print("#{0}".format(method.GetOptimizerIteration()))
-    print("\tMetric Value: {0:10.5f}".format( method.GetMetricValue()))
-    print("\tLearningRate: {0:10.5f}".format(method.GetOptimizerLearningRate()))
-    if (method.GetOptimizerConvergenceValue() != sys.float_info.max):
-        print("\tConvergence Value: {0:.5e}".format(method.GetOptimizerConvergenceValue()))
+    # if (method.GetOptimizerIteration() == 0):
+    #     print("\tLevel: {0}".format(method.GetCurrentLevel()))
+    #     print("\tScales: {0}".format(method.GetOptimizerScales()))
+    # print("#{0}".format(method.GetOptimizerIteration()))
+    # print("\tMetric Value: {0:10.5f}".format( method.GetMetricValue()))
+    # print("\tLearningRate: {0:10.5f}".format(method.GetOptimizerLearningRate()))
+    # if (method.GetOptimizerConvergenceValue() != sys.float_info.max):
+    #     print("\tConvergence Value: {0:.5e}".format(method.GetOptimizerConvergenceValue()))
+    return
 
 def command_multiresolution_iteration(method):
-    print("\tStop Condition: {0}".format(method.GetOptimizerStopConditionDescription()))
-    print("============= Resolution Change =============")
+    # print("\tStop Condition: {0}".format(method.GetOptimizerStopConditionDescription()))
+    # print("============= Resolution Change =============")
+    return
 
 def init_displacement_field_TPS(image, uid):
   with open("fiducials.json") as f:
@@ -38,7 +40,7 @@ def init_displacement_field_TPS(image, uid):
   step_size = 4
   df = np.zeros((256 // step_size, 256 // step_size, 2), np.float64)
   pts = [[x * step_size / 255 * 799, y * step_size / 255 * 799] for y in range(256 // step_size) for x in range(256 // step_size)]
-  print("Sampling %s points from fiducial-based TPS..." % len(pts))
+  # print("Sampling %s points from fiducial-based TPS..." % len(pts))
   pts_warped = tps.applyTransformation(pts)
   for y in range(256 // step_size):
     for x in range(256 // step_size):
@@ -47,12 +49,14 @@ def init_displacement_field_TPS(image, uid):
   df = cv2.resize(df, (256, 256))
   return df
 
-if len ( sys.argv ) < 3:
-    print( "Usage: {0} <fixedImageFilter> <movingImageFile> <outputTransformFile>".format(sys.argv[0]))
+if len ( sys.argv ) != 3:
+    print( "Usage: {0} <IMAGE_FILENAME.png> <PARTICIPANT_ID>".format(sys.argv[0]))
     sys.exit ( 1 )
 
 image = sys.argv[1]
 uid = sys.argv[2]
+print("Registering with labeled fiducials: %s %s" % (image, uid))
+
 
 kernel = np.ones((3, 3), np.uint8)
 fixed_0_np = cv2.imread("../data/png/drawings/%s&%s.png" % (image[:-4], uid), cv2.IMREAD_GRAYSCALE)
