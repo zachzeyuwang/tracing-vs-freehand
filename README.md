@@ -4,6 +4,7 @@ Zeyu Wang, Sherry Qiu, Nicole Feng, Holly Rushmeier, Leonard McMillan, Julie Dor
 
 [[Paper]](https://graphics.cs.yale.edu/sites/default/files/tracing-vs-freehand_0.pdf)
 [[Project]](https://zachzeyuwang.github.io/tracing-vs-freehand)
+[[Browser]](http://tracer.cs.yale.edu/tracing-vs-freehand/)
 
 ![teaser](teaser.jpg)
 
@@ -11,23 +12,15 @@ Zeyu Wang, Sherry Qiu, Nicole Feng, Holly Rushmeier, Leonard McMillan, Julie Dor
 
 The dataset consists of 1,498 tracings and freehand drawings by 110 participants for 100 image prompts. Our drawings are registered to the prompts and include vector-based timestamped strokes collected via stylus input.
 
-Instructions for data preparation can be found in the `data` folder. All code in this repository takes input from the `data` folder.
+Please run `zsh prepare_data.sh` to download the dataset, which will be placed in the `data` folder (about 600MB after unzipping). All code in this repository takes input from the `data` folder.
 
-*Please right click the links below and "Save link as..." if it doesn't download automatically.*
-
-[Image prompts](http://tracer.cs.yale.edu/tracing-vs-freehand/data/images.zip).
-
-All rendered tracings and freehand drawings in [SVG](http://tracer.cs.yale.edu/tracing-vs-freehand/data/svg.zip) and [PNG](http://tracer.cs.yale.edu/tracing-vs-freehand/data/png.zip).
-
-Raw JSON data: [tracings](http://tracer.cs.yale.edu/tracing-vs-freehand/data/tracings.json), [freehand drawings](http://tracer.cs.yale.edu/tracing-vs-freehand/data/drawings.json), [registered freehand drawings](http://tracer.cs.yale.edu/tracing-vs-freehand/data/drawings_registered.json).
-
-JSON data format:
+`data/tracings.json`, `data/drawings.json`, and `data/drawings_registered.json` use the following format.
 ```
 {
   // each prompt
-  "image": {
+  "IMAGE_FILENAME.png": {
     // each drawing
-    "participant": [
+    "PARTICIPANT_ID": [
       // each stroke
       {
         "path": string (Unix timestamp, x, y coordinates at each vertex separated by comma)
@@ -46,7 +39,7 @@ JSON data format:
 
 ## Code
 
-Before running any code, please run `conda env create -f environment.yml` and `conda activate tracer`.
+Before running any code, please run `conda env create -f environment.yml` and `conda activate tracer`. All code has been tested on Ubuntu 20.04.
 
 `utils/render_png_from_json.py` renders the drawings in png format from the raw JSON data.
 
