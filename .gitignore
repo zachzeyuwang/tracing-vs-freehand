@@ -2,6 +2,7 @@ data/images/
 data/density/
 data/png/
 data/svg/
+data/npr_thresh/
 data/*.json
 data/*.zip
 registration/__pycache__/
@@ -9,3 +10,8 @@ registration/transform_labeled/
 registration/transform_unlabeled/
 registration/visual_labeled/
 registration/visual_unlabeled/
+utils/subsets/*.png
+utils/subsets/*.svg
+utils/progression/*.png
+figs/*.jpg
+

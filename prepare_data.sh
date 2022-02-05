@@ -6,5 +6,6 @@ wget http://tracer.cs.yale.edu/tracing-vs-freehand/data/images.zip
 wget http://tracer.cs.yale.edu/tracing-vs-freehand/data/density.zip
 wget http://tracer.cs.yale.edu/tracing-vs-freehand/data/png.zip
 wget http://tracer.cs.yale.edu/tracing-vs-freehand/data/svg.zip
+wget http://tracer.cs.yale.edu/tracing-vs-freehand/data/npr_thresh.zip
 unzip '*.zip'
 rm *.zip
