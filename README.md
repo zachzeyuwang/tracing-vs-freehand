@@ -41,10 +41,11 @@ Please run `bash prepare_data.sh` to download the dataset, which will be placed 
 
 Before running any code, please run `conda env create -f environment.yml`, `conda activate tracer`, and `sudo apt install librsvg2-bin`. All code has been tested on Ubuntu 20.04.
 
-- `utils/` contains the code for rendering drawings and their composites from the raw JSON data.
+- `utils/` contains the code for rendering drawings and their subsets and composites from the raw JSON data.
 - `registration/` contains the code for registering freehand drawings to tracing density.
+- `figs/` contains the code for combining intermediate visual results to make the teaser in our paper.
 
-If you need anything in particular, please feel free to reach out to me directly.
+I will update this repo from time to time. If you need anything in particular, please feel free to reach out to me directly.
 
 ## Citation
 
