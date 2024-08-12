@@ -4,7 +4,7 @@ Zeyu Wang, Sherry Qiu, Nicole Feng, Holly Rushmeier, Leonard McMillan, Julie Dor
 
 [[Paper]](https://graphics.cs.yale.edu/sites/default/files/tracing-vs-freehand_0.pdf)
 [[Project]](https://zachzeyuwang.github.io/tracing-vs-freehand)
-[[Browser]](http://tracer.cs.yale.edu/tracing-vs-freehand/)
+[[Browser]](https://cislab.hkust-gz.edu.cn/projects/tracing-vs-freehand/)
 
 ![teaser](teaser.jpg)
 
